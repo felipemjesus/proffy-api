@@ -1,11 +1,9 @@
 import espress from 'express';
+import routes from './routes';
 
 const app = espress();
 
 app.use(espress.json());
-
-app.get('/',  (request, response) => {
-    return response.json({ message: "Hello World" });
-});
+app.use(routes);
 
 app.listen(3333);
