@@ -6,6 +6,8 @@ const routes = espress.Router();
 const classesController = new ClassesController();
 const connectionsController = new ConnectionsController();
 
+routes.get('/', () => 'Proffy API');
+
 routes.get('/classes', classesController.index);
 routes.post('/classes', classesController.create);
 
